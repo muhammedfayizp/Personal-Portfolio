@@ -1,0 +1,54 @@
+body {
+  background-color: #000f03;
+  margin: 0;
+  font-family: Inter, sans-serif;
+}
+.line {
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(34,197,94,0.6),
+    transparent
+  );
+  opacity: 0.5;
+  animation: flow 18s linear infinite;
+}
+
+.line-1 {
+  top: 20%;
+  animation-duration: 8s;
+}
+
+.line-2 {
+  top: 40%;
+  animation-duration: 15s;
+}
+
+.line-3 {
+  top: 60%;
+  animation-duration: 5s;
+}
+
+.vertical-timeline-element-content {
+  width: 47% !important;
+  max-width: 720px;
+}
+
+@media (max-width: 768px) {
+  .vertical-timeline-element-content {
+    width: 80% !important;
+  }
+}  
+
+
+@keyframes flow {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
