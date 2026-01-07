@@ -32,10 +32,7 @@ body {
   animation-duration: 5s;
 }
 
-.vertical-timeline-element-content {
-  width: 47% !important;
-  max-width: 720px;
-}
+
 
 @media (max-width: 768px) {
   .vertical-timeline-element-content {

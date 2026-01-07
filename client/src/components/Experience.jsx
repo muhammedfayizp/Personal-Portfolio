@@ -59,7 +59,7 @@ const Experience = () => {
         <span className="absolute left-0 right-0 top-1/2 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
       </motion.h2>
 
-      <VerticalTimeline lineColor="rgba(255,255,255,0.15)" >
+      <VerticalTimeline lineColor="rgba(255,255,255,0.15)">
         {/* Item 1 */}
         <VerticalTimelineElement
           contentStyle={contentStyle}
