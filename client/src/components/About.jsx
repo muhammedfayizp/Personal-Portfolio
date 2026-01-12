@@ -15,7 +15,7 @@ const fadeUp = {
 
 const About = () => {
   return (
-    <section id="about_me" className="py-32 md-px-20 lg:px-50 px-10 text-white ">
+    <section id="about_me" className="py-32 md-px-20  px-10 text-white ">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -33,7 +33,7 @@ const About = () => {
           </span>
           <span className="absolute left-0 right-0 top-1/2 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
         </motion.h2>
-        <p className="text-gray-400 max-w-3xl leading-relaxed">
+        <p className="text-gray-400 max-w-3xl leading-relaxed lg:px-20">
           I’m a full-stack MERN developer who enjoys turning ideas into fast, reliable,
           and visually engaging web applications. My focus is on writing clean,
           maintainable code while crafting interfaces that feel smooth, intuitive, and

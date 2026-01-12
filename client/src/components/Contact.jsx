@@ -304,14 +304,14 @@ const Contact = () => {
           <form onSubmit={handleSubmit} className="space-y-6 text-left">
             {/* To */}
             <div>
-              <label className="block text-sm text-white/60 mb-2">
+              <label className="block text-sm text-white/30 mb-2">
                 To
               </label>
               <input
                 type="email"
                 value="fayizp6235@gmail.com"
                 readOnly
-                className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white opacity-80 cursor-not-allowed"
+                className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white/30 opacity-10 opacity-80 cursor-not-allowed"
               />
             </div>
 
@@ -325,7 +325,7 @@ const Contact = () => {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="yourname@gmail.com"
-                className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-teal-400/60"
+                className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-white/60 focus:outline-none focus:border-teal-400/60"
               />
               {errors.email && (
                 <p className="text-red-400 text-xs mt-1">
@@ -345,7 +345,7 @@ const Contact = () => {
                 value={subject}
                 onChange={(e) => setSubject(e.target.value)}
                 placeholder="Job opportunity / Collaboration"
-                className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-white/40 focus:outline-none focus:border-teal-400/60"
+                className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-white/60 focus:outline-none focus:border-teal-400/60"
               />
               {errors.subject && (
                 <p className="text-red-400 text-xs mt-1">
@@ -364,7 +364,7 @@ const Contact = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
                 placeholder="Write your message..."
-                className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-white/40 resize-none focus:outline-none focus:border-teal-400/60"
+                className="w-full px-4 py-3 rounded-xl bg-black/40 border border-white/10 text-white placeholder-white/60 resize-none focus:outline-none focus:border-teal-400/60"
               />
               {errors.message && (
                 <p className="text-red-400 text-xs mt-1">

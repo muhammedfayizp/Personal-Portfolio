@@ -14,7 +14,7 @@ const container = {
 const item = {
   hidden: {
     opacity: 0,
-    y: 24,
+
   },
   show: {
     opacity: 1,
@@ -25,21 +25,6 @@ const item = {
     },
   },
 }
-
-// const imageAnim = {
-//   hidden: {
-//     opacity: 0,
-//     scale: 1.03,
-//   },
-//   show: {
-//     opacity: 1,
-//     scale: 1,
-//     transition: {
-//       duration: 0.6,
-//       ease: [0.22, 1, 0.36, 1],
-//     },
-//   },
-// }
 
 const imageAnim = {
   hidden: { opacity: 0 },

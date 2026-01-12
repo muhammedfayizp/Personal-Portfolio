@@ -87,6 +87,7 @@ const Skills = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             whileHover="hover"
+            whileTap={{ scale: 0.95 }}
             variants={{
               hover: {
                 y: -8,

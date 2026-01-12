@@ -59,49 +59,7 @@ const Datas = () => {
 
   return (
     <section ref={dataRef} className="relative min-h-screen text-white">
-
       {/* LEFT FIXED PANEL (DESKTOP ONLY) */}
-      {/* <AnimatePresence>
-        {showData && (
-            
-          <motion.div
-            className="hidden md:flex fixed top-0 left-0 h-screen w-1/3 px-10 items-center z-50"
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -50 }}
-            transition={{ duration: 0.4 }}
-          >
-            <div>
-              <h1 className="text-4xl font-serif mb-4">Fayiz P</h1>
-              <p className="text-white/70 leading-relaxed max-w-sm">
-                Full-stack MERN developer building modern, animated web
-                experiences with React and Node.js.
-              </p>
-            </div>
-          
-          <div className="  ">
-          {menuItems.map((item, i) => (
-            <motion.a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              onClick={close}
-              initial={{ x: -40, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ delay: i * 0.1 }}
-              className="
-                text-xl sm:text-xl
-                font-serif tracking-wide
-                hover:opacity-60 transition
-              "
-            >
-              {item.replace("_", " ")}
-            </motion.a>
-          ))}
-        </div>
-        </motion.div>
-        )}
-      </AnimatePresence> */}
-
       <AnimatePresence>
         {showData && (
           <motion.aside
@@ -133,32 +91,6 @@ const Datas = () => {
             </div>
 
             {/* NAVIGATION */}
-            {/* <nav className="space-y-4 mt-20">
-              {menuItems.map((item, i) => (
-                <motion.a
-                  key={item}
-                  href={`#${item.toLowerCase()}`}
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.3 + i * 0.1 }}
-                  className="
-                    block
-                    text-sm tracking-widest uppercase
-                    text-white/50
-                    hover:text-white
-                    transition
-                    relative
-                    pl-8
-                    before:absolute before:left-0 before:top-1/2
-                    before:h-px before:w-4
-                    before:bg-white/30
-                  "
-                >
-                  {item.replace("_", " ")}
-                </motion.a>
-              ))}
-            </nav> */}
-
             <nav className="space-y-4 mt-20">
               {menuItems.map((item, i) => {
                 const id = item.toLowerCase()
@@ -174,9 +106,9 @@ const Datas = () => {
                     className={`
                       block text-sm tracking-widest uppercase transition relative pl-8
                       ${isActive
-                          ? "text-white before:w-8 before:bg-white"
-                          : "text-white/50 hover:text-white before:w-4 before:bg-white/30"
-                        }
+                        ? "text-white before:w-8 before:bg-white"
+                        : "text-white/50 hover:text-white before:w-4 before:bg-white/30"
+                      }
                       before:absolute before:left-0 before:top-1/2 before:h-px
                     `}
                   >
@@ -185,11 +117,9 @@ const Datas = () => {
                 )
               })}
             </nav>
-
           </motion.aside>
         )}
-      </AnimatePresence>
-
+      </AnimatePresence> 
 
       {/* RIGHT CONTENT */}
       <div className="w-full md:ml-[34.333%] md:w-2/3 space-y-16">
