@@ -44,7 +44,8 @@ const iconStyle = {
 
 const Experience = () => {
   return (
-    <section id="experience" className="text-white">
+    <section
+     id="experience" className="text-white">
       {/* Heading */}
       <motion.h2
         initial="hidden"

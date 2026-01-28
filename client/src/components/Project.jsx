@@ -173,16 +173,16 @@ const Projects = () => {
               </motion.p>
 
               <motion.div variants={item} className="flex flex-wrap gap-2 mt-4">
-                <span className="px-3 py-1 text-xs rounded-full bg-white/20">React</span>
-                <span className="px-3 py-1 text-xs rounded-full bg-white/20">Node</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-white/20">EJS</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-white/20">Node.js</span>
                 <span className="px-3 py-1 text-xs rounded-full bg-white/20">MongoDB</span>
               </motion.div>
 
               <motion.div variants={item} className="flex gap-4 mt-6">
-                <a className="px-4 py-2 text-sm rounded-full bg-white text-black font-medium">
+                <a href="https://sportkit.onrender.com/" className="px-4 py-2 text-sm rounded-full bg-white text-black font-medium">
                   Live Demo
                 </a>
-                <a className="px-4 py-2 text-sm rounded-full border border-white/30">
+                <a href="https://github.com/muhammedfayizp/Sportkit" className="px-4 py-2 text-sm rounded-full border border-white/30">
                   GitHub
                 </a>
               </motion.div>
@@ -201,7 +201,7 @@ const Projects = () => {
               <div className="w-full h-52 sm:h-60 min-h-[13rem] rounded-2xl overflow-hidden">
 
                 <img
-                  src="/projects/ecommerce.png"
+                  src="/projects/e-commerce.png"
                   alt="E-commerce Project"
                   className="w-full h-full object-cover"
                 />
@@ -249,10 +249,10 @@ const Projects = () => {
               </motion.div>
 
               <motion.div variants={item} className="flex gap-4 mt-6">
-                <a className="px-4 py-2 text-sm rounded-full bg-white text-black font-medium">
+                <a href="" className="px-4 py-2 text-sm rounded-full bg-white text-black font-medium">
                   Live Demo
                 </a>
-                <a className="px-4 py-2 text-sm rounded-full border border-white/30">
+                <a href="" className="px-4 py-2 text-sm rounded-full border border-white/30">
                   GitHub
                 </a>
               </motion.div>
@@ -271,7 +271,7 @@ const Projects = () => {
               <div className="w-full h-52 sm:h-60 min-h-[13rem] rounded-2xl overflow-hidden">
 
                 <img
-                  src="/projects/ecommerce.png"
+                  src=""
                   alt="E-commerce Project"
                   className="w-full h-full object-cover"
                 />
@@ -290,7 +290,6 @@ const Projects = () => {
             text-white
           "
         >
-
           <div className="flex flex-col md:flex-row gap-8 items-center">
             {/* Content */}
             <motion.div
@@ -301,28 +300,28 @@ const Projects = () => {
               viewport={{ once: false, amount: 0.4 }}
             >
               <motion.h3 variants={item} className="text-2xl font-semibold">
-                E-commerce Platform
+                Netflix_Clone
               </motion.h3>
 
               <motion.p
                 variants={item}
                 className="text-white/70 mt-3 text-sm leading-relaxed"
               >
-                Full-stack MERN e-commerce application with admin dashboard,
-                authentication, product management and payments.
+                Netflix-inspired streaming platform that allows users to sign in,
+                explore movies, and manage a personal watchlist using real-time data.
               </motion.p>
 
               <motion.div variants={item} className="flex flex-wrap gap-2 mt-4">
                 <span className="px-3 py-1 text-xs rounded-full bg-white/20">React</span>
                 <span className="px-3 py-1 text-xs rounded-full bg-white/20">Node</span>
-                <span className="px-3 py-1 text-xs rounded-full bg-white/20">MongoDB</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-white/20">Firebase</span>
               </motion.div>
 
               <motion.div variants={item} className="flex gap-4 mt-6">
-                <a className="px-4 py-2 text-sm rounded-full bg-white text-black font-medium">
+                <a href="https://netflix-clone-flame-xi.vercel.app" className="px-4 py-2 text-sm rounded-full bg-white text-black font-medium">
                   Live Demo
                 </a>
-                <a className="px-4 py-2 text-sm rounded-full border border-white/30">
+                <a href="https://github.com/muhammedfayizp/Netflix_Clone" className="px-4 py-2 text-sm rounded-full border border-white/30">
                   GitHub
                 </a>
               </motion.div>
@@ -341,7 +340,7 @@ const Projects = () => {
               <div className="w-full h-52 sm:h-60 min-h-[13rem] rounded-2xl overflow-hidden">
 
                 <img
-                  src="/projects/ecommerce.png"
+                  src="/projects/Netflix_clone.png"
                   alt="E-commerce Project"
                   className="w-full h-full object-cover"
                 />

@@ -15,7 +15,6 @@ import {
 } from "react-icons/si"
 
 
-// const skills = ['JavaScript','TypeScript',"React","Redux", "Node.js", "MongoDB",'PostgreSQL', "Express.js", "Tailwind", "WebRTC",'Socket.IO']
 const skills = [
   { name: "JavaScript", icon: SiJavascript, color: "hover:bg-yellow-400/20 hover:text-yellow-400" },
   { name: "TypeScript", icon: SiTypescript, color: "hover:bg-blue-500/20 hover:text-blue-400" },
@@ -57,27 +56,6 @@ const Skills = () => {
         </span>
         <span className="absolute left-0 right-0 top-1/2 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
       </motion.h2>
-      {/* <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
-        {skills.map(({ name, icon: Icon, color }) => (
-          <motion.div
-            key={name}
-            whileHover={{ scale: 1.08 }}
-            transition={{ type: "spring", stiffness: 300 }}
-            className={`
-              flex flex-col items-center justify-center gap-3
-              p-3 rounded-xl
-              bg-zinc-900/20
-              border border-white/5
-              text-white/70
-              transition-all duration-300
-              ${color}
-            `}
-          >
-            <Icon className="text-lg" />
-            <span className="text-sm font-small tracking-wide">{name}</span>
-          </motion.div>
-        ))}
-      </div> */}
 
       <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {skills.map(({ name, icon: Icon, color }) => (

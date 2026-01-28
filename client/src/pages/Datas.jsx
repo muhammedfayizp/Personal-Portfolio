@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import Skills from "../components/Skills"
@@ -104,7 +102,7 @@ const Datas = () => {
                     animate={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.3 + i * 0.1 }}
                     className={`
-                      block text-sm tracking-widest uppercase transition relative pl-8
+                      block text-sm tracking-widest font-nova uppercase  transition relative pl-8
                       ${isActive
                         ? "text-white before:w-8 before:bg-white"
                         : "text-white/50 hover:text-white before:w-4 before:bg-white/30"

@@ -363,9 +363,6 @@ const Home = () => {
             transition={{ delay: 0.4 }}
             className="mt-6 max-w-lg mx-auto lg:mx-0 text-gray-400 text-sm sm:text-base"
           >
-            {/* Detail-oriented full-stack developer with 1.5 years of hands-on
-            experience in the MERN stack. Skilled in building scalable,
-            high-performance web applications using React, Node.js, and MongoDB. */}
             A Passionate full-stack engineer building modern, clean, and scalable web solutions.
           </motion.p>
         </div>

@@ -6,6 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        nova: ["'Nova Square'", "sans-serif"],
         serif: ['Playfair Display', 'serif'],
         sans: ['Inter', 'sans-serif'],
       },

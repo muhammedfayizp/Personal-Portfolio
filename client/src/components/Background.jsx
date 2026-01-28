@@ -4,8 +4,7 @@ import LightRays from "../layouts/LightRays"
 const Background = () => {
   return (
     <div className="absolute inset-0 -z-10 overflow-hidden">
-      {/* <div style={{ width: '100%', height: '750px', position: 'relative' }}> */}
-      {/* <div className="relative w-full h-[60vh] sm:h-[900px] md:h-[750px]"> */}
+     
       <div className="relative w-full min-h-screen">
 
         <LightRays
