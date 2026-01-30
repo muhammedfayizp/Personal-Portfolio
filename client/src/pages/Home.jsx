@@ -129,6 +129,30 @@ const Home = () => {
     if (homeRef.current) obServer.observe(homeRef.current)
     return () => obServer.disconnect()
   }, [])
+
+  useEffect(() => {
+    if (!open) return;
+  
+    window.lenis?.stop();
+  
+    const scrollY = window.scrollY;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = "100%";
+  
+    return () => {
+      window.lenis?.start();
+  
+      const y = document.body.style.top;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+  
+      window.scrollTo(0, parseInt(y || "0") * -1);
+    };
+  }, [open]);
+  
+  
   return (
     <section
       ref={homeRef}
@@ -230,6 +254,7 @@ const Home = () => {
                   exit="exit"
                   transition={{ duration: 0.25, ease: "easeOut" }}
                   onClick={(e) => e.stopPropagation()}
+                  data-lenis-prevent
                   className="
                     relative
                     w-full max-w-3xl

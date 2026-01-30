@@ -208,7 +208,9 @@ const ScrollStack = ({
         wheelMultiplier: 1,
         lerp: 0.1,
         syncTouch: true,
-        syncTouchLerp: 0.075
+        syncTouchLerp: 0.075,
+        prevent: node => node.hasAttribute?.('data-lenis-prevent')
+
       });
 
       lenis.on('scroll', handleScroll);
@@ -220,6 +222,7 @@ const ScrollStack = ({
       animationFrameRef.current = requestAnimationFrame(raf);
 
       lenisRef.current = lenis;
+      window.lenis = lenis;
       return lenis;
     } else {
       const scroller = scrollerRef.current;
@@ -248,6 +251,7 @@ const ScrollStack = ({
       animationFrameRef.current = requestAnimationFrame(raf);
 
       lenisRef.current = lenis;
+      window.lenis = lenis;
       return lenis;
     }
   }, [handleScroll, useWindowScroll]);

@@ -122,8 +122,7 @@ const Contact = () => {
 
   return (
     <section
-      id="contact"
-      className="py-32 px-6 md:px-10 text-white text-center"
+      id="contact" className="py-32 px-6 md:px-10 text-white text-center"
     >
       {/* Heading */}
       <motion.h2
