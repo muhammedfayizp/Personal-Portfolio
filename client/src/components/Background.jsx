@@ -12,7 +12,8 @@ const Background = () => {
           raysColor="#00ffff"
           raysSpeed={0.8}
           lightSpread={0.8}
-          rayLength={0.8}
+          rayLength={0.7}
+          fadeDistance={1.0}
           followMouse={true}
           mouseInfluence={0.1}
           noiseAmount={0.1}
@@ -21,6 +22,7 @@ const Background = () => {
         />
       </div>
 
+      
       {/* Light Lines */}
       <div className="line line-1"></div>
       <div className="line line-2"></div>

@@ -197,7 +197,6 @@ const Projects = () => {
               whileInView="show"
               viewport={{ once: false, amount: 0.4 }}
             >
-              {/* <div className="w-full h-52 sm:h-60 rounded-2xl overflow-hidden"> */}
               <div className="w-full h-52 sm:h-60 min-h-[13rem] rounded-2xl overflow-hidden">
 
                 <img
@@ -335,7 +334,6 @@ const Projects = () => {
               whileInView="show"
               viewport={{ once: false, amount: 0.4 }}
             >
-              {/* <div className="w-full h-52 sm:h-60 rounded-2xl overflow-hidden"> */}
               <div className="w-full h-52 sm:h-60 min-h-[13rem] rounded-2xl overflow-hidden">
 
                 <img
