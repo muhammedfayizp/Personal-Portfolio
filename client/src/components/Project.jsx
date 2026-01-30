@@ -280,9 +280,16 @@ const Projects = () => {
         {/*4 section */}
 
         <ScrollStackItem
+          // itemClassName="
+          //   bg-gradient-to-br from-[#0B1220] via-[#0F1B2D] to-[#020617]
+          //   border border-emerald-400/20
+          //   backdrop-blur-xl
+          //   shadow-[0_30px_40px_-25px_rgba(45,212,191,0.25)]
+          //   text-white
+          // "
           itemClassName="
-            bg-gradient-to-br from-[#0B1220] via-[#0F1B2D] to-[#020617]
-            border border-emerald-400/20
+            bg-gradient-to-br from-[#0A0F0C] via-[#0E1512] to-[#020202]
+            border border-teal-400/20
             backdrop-blur-xl
             shadow-[0_30px_40px_-25px_rgba(45,212,191,0.25)]
             text-white
