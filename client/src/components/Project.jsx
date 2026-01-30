@@ -211,7 +211,8 @@ const Projects = () => {
         </ScrollStackItem>
 
         {/* PROJECT 3 */}
-        <ScrollStackItem
+
+        {/* <ScrollStackItem
           itemClassName="
             bg-gradient-to-br from-[#0A0F0C] via-[#0E1512] to-[#020202]
             border border-teal-400/20
@@ -222,7 +223,6 @@ const Projects = () => {
         >
 
           <div className="flex flex-col md:flex-row gap-8 items-center">
-            {/* Content */}
             <motion.div
               className="md:w-1/2"
               variants={container}
@@ -259,7 +259,6 @@ const Projects = () => {
             </motion.div>
 
 
-            {/* Image */}
             <motion.div
               className="md:w-1/2 w-full"
               variants={imageAnim}
@@ -267,7 +266,6 @@ const Projects = () => {
               whileInView="show"
               viewport={{ once: false, amount: 0.4 }}
             >
-              {/* <div className="w-full h-52 sm:h-60 rounded-2xl overflow-hidden"> */}
               <div className="w-full h-52 sm:h-60 min-h-[13rem] rounded-2xl overflow-hidden">
 
                 <img
@@ -278,7 +276,8 @@ const Projects = () => {
               </div>
             </motion.div>
           </div>
-        </ScrollStackItem>
+        </ScrollStackItem> */}
+        
         {/*4 section */}
 
         <ScrollStackItem
