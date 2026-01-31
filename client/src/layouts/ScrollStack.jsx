@@ -19,7 +19,7 @@ const ScrollStack = ({
   className = '',
   itemDistance = 60,
   itemScale = 0.03,
-  itemStackDistance = 50,
+  itemStackDistance = 30,
   stackPosition = '20%',
   scaleEndPosition = '10%',
   baseScale = 0.85,
@@ -38,8 +38,8 @@ const ScrollStack = ({
   const isUpdatingRef = useRef(false);
   const cardOffsetsRef = useRef([]);
 
- 
-  
+
+
 
   const calculateProgress = useCallback((scrollTop, start, end) => {
     if (scrollTop < start) return 0;
@@ -262,8 +262,8 @@ const ScrollStack = ({
       return rect.top + window.scrollY;
     });
   };
-  
-  
+
+
   useLayoutEffect(() => {
     const scroller = scrollerRef.current;
     if (!scroller) return;
@@ -278,8 +278,8 @@ const ScrollStack = ({
 
     cacheOffsets();
     window.addEventListener("resize", cacheOffsets);
-    
-  
+
+
 
     const transformsCache = lastTransformsRef.current;
 
@@ -335,20 +335,20 @@ const ScrollStack = ({
   // Container styles based on scroll mode
   const containerStyles = useWindowScroll
     ? {
-        overscrollBehavior: 'contain',
-        WebkitOverflowScrolling: 'touch',
-        WebkitTransform: 'translateZ(0)',
-        transform: 'translateZ(0)'
-      }
+      overscrollBehavior: 'contain',
+      WebkitOverflowScrolling: 'touch',
+      WebkitTransform: 'translateZ(0)',
+      transform: 'translateZ(0)'
+    }
     : {
-        // Container scroll mode - original behavior
-        overscrollBehavior: 'contain',
-        WebkitOverflowScrolling: 'touch',
-        scrollBehavior: 'smooth',
-        WebkitTransform: 'translateZ(0)',
-        transform: 'translateZ(0)',
-        willChange: 'scroll-position'
-      };
+      // Container scroll mode - original behavior
+      overscrollBehavior: 'contain',
+      WebkitOverflowScrolling: 'touch',
+      scrollBehavior: 'smooth',
+      WebkitTransform: 'translateZ(0)',
+      transform: 'translateZ(0)',
+      willChange: 'scroll-position'
+    };
 
   const containerClassName = useWindowScroll
     ? `relative w-full ${className}`.trim()
@@ -356,10 +356,15 @@ const ScrollStack = ({
 
   return (
     <div className={containerClassName} ref={scrollerRef} style={containerStyles}>
-      <div className="scroll-stack-inner px-8 min-h-screen">
-        {children}
+      <div
+        className="scroll-stack-inner px-8 min-h-screen"
+        style={{ paddingBottom: `${children.length * itemDistance/2}px` }}
+      >        {children}
         {/* Spacer so the last pin can release cleanly */}
-        <div className="scroll-stack-end w-full h-px" />
+        <div
+          className="scroll-stack-end w-full"
+          style={{ height: `${cardsRef.current.length * itemDistance}px` }}
+        />
       </div>
     </div>
   );

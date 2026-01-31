@@ -45,12 +45,12 @@ const iconStyle = {
 const Experience = () => {
   return (
     <section
-     id="experience" className="text-white">
+     id="experience" className="py-16 px-10 text-white">
       {/* Heading */}
       <motion.h2
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
         variants={fadeUp}
         className="relative text-4xl sm:text-6xl font-serif text-center mb-20"
       >

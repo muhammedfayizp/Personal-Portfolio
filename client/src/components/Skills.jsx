@@ -43,11 +43,11 @@ const fadeUp = {
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-32 px-10 text-white">
+    <section id="skills" className="py-16 px-10 text-white">
       <motion.h2
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
         variants={fadeUp}
         className="relative text-4xl sm:text-6xl font-serif text-center mb-16"
       >

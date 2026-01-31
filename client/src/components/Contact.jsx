@@ -121,15 +121,13 @@ const Contact = () => {
 
 
   return (
-    <section
-      id="contact" className="py-32 px-6 md:px-10 text-white text-center"
-    >
+    <section id="contact" className="py-16 px-10  text-white text-center">
       {/* Heading */}
       <motion.h2
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        viewport={{ once: false }}
+        viewport={{ once: true , amount: 0.5 }}
         className="relative text-4xl sm:text-5xl font-serif mb-16"
       >
         <span className="relative z-10 px-4 rounded-lg bg-[#020c05]">

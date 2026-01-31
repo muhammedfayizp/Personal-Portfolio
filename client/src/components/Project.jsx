@@ -49,12 +49,12 @@ const fadeUp = {
 
 const Projects = () => {
   return (
-    <section id="projects" className=" text-white pb-[50vh] sm:pb-[45vh] md:pb-[35vh] lg:pb-[25vh]">
+    <section id="projects" className="py-16 px-10 text-white ">
 
       <motion.h2
         initial="hidden"
         whileInView="show"
-        viewport={{ once: false, amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
         variants={fadeUp}
         className="relative text-4xl sm:text-6xl font-serif text-center mb-16"
       >
@@ -64,7 +64,8 @@ const Projects = () => {
         <span className="absolute left-0 right-0 top-1/2 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
       </motion.h2>
 
-      <ScrollStack >
+    
+      <ScrollStack  initial={false} >
         {/* PROJECT 1 */}
 
         <ScrollStackItem
@@ -197,8 +198,7 @@ const Projects = () => {
               whileInView="show"
               viewport={{ once: false, amount: 0.4 }}
             >
-              <div className="w-full h-52 sm:h-60 min-h-[13rem] rounded-2xl overflow-hidden">
-
+              <div className="w-full aspect-[22/11] rounded-2xl overflow-hidden">
                 <img
                   src="/projects/e-commerce.png"
                   alt="E-commerce Project"
@@ -276,7 +276,7 @@ const Projects = () => {
             </motion.div>
           </div>
         </ScrollStackItem> */}
-        
+
         {/*4 section */}
 
         <ScrollStackItem
@@ -341,8 +341,7 @@ const Projects = () => {
               whileInView="show"
               viewport={{ once: false, amount: 0.4 }}
             >
-              <div className="w-full h-52 sm:h-60 min-h-[13rem] rounded-2xl overflow-hidden">
-
+              <div className="w-full aspect-[22/11] rounded-2xl overflow-hidden">
                 <img
                   src="/projects/Netflix_clone.png"
                   alt="E-commerce Project"

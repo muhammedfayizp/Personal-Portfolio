@@ -15,7 +15,7 @@ const fadeUp = {
 
 const About = () => {
   return (
-    <section id="about_me" className="py-32 md-px-20  px-10 text-white ">
+    <section id="about_me" className="py-16 px-10 text-white ">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +24,7 @@ const About = () => {
         <motion.h2
           initial="hidden"
           whileInView="show"
-          viewport={{ once: false, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.5 }}
           variants={fadeUp}
           className="relative text-4xl sm:text-6xl font-serif text-center mb-16"
         >
