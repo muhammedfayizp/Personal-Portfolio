@@ -64,8 +64,8 @@ const Projects = () => {
         <span className="absolute left-0 right-0 top-1/2 h-px bg-gradient-to-r from-transparent via-white/30 to-transparent" />
       </motion.h2>
 
-    
-      <ScrollStack  initial={false} >
+
+      <ScrollStack initial={false} >
         {/* PROJECT 1 */}
 
         <ScrollStackItem
@@ -240,7 +240,7 @@ const Projects = () => {
               </motion.p>
 
               <motion.div variants={item} className="flex flex-wrap gap-2 mt-4">
-              <span className="px-3 py-1 text-xs rounded-full bg-white/20">Next.js</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-white/20">Next.js</span>
                 <span className="px-3 py-1 text-xs rounded-full bg-white/20">React</span>
                 <span className="px-3 py-1 text-xs rounded-full bg-white/20">JavaScript</span>
                 <span className="px-3 py-1 text-xs rounded-full bg-white/20">Tailwind CSS</span>
@@ -336,6 +336,72 @@ const Projects = () => {
               <div className="w-full aspect-[22/11] rounded-2xl overflow-hidden">
                 <img
                   src="/projects/Netflix_clone.png"
+                  alt="E-commerce Project"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+          </div>
+        </ScrollStackItem>
+
+        <ScrollStackItem
+          itemClassName="
+            bg-gradient-to-br from-[#0A0F0C] via-[#0E1512] to-[#020202]
+            border border-teal-400/20
+            backdrop-blur-xl
+            shadow-[0_30px_40px_-25px_rgba(45,212,191,0.25)]
+            text-white
+          "
+        >
+
+          <div className="flex flex-col md:flex-row gap-8 items-center">
+            <motion.div
+              className="md:w-1/2"
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.4 }}
+            >
+              <motion.h3 variants={item} className="text-2xl font-semibold">
+                Lazza
+              </motion.h3>
+
+              <motion.p
+                variants={item}
+                className="text-white/70 mt-3 text-sm leading-relaxed"
+              >
+                A fully responsive clone website. LAZZA replicates a modern landing page layout with clean design, mobile-first responsiveness, and structured UI components. This project was built to learn and understand the basics of web development.
+              </motion.p>
+
+
+              <motion.div variants={item} className="flex flex-wrap gap-2 mt-4">
+                <span className="px-3 py-1 text-xs rounded-full bg-white/20">HTML</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-white/20">CSS</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-white/20">Bootstrap</span>
+              </motion.div>
+
+              <motion.div variants={item} className="flex gap-4 mt-6">
+                <a href="https://lazza-xi.vercel.app/" className="px-4 py-2 text-sm rounded-full bg-white text-black font-medium">
+                  Live Demo
+                </a>
+                <a href="https://github.com/muhammedfayizp/lazza" className="px-4 py-2 text-sm rounded-full border border-white/30">
+                  GitHub
+                </a>
+              </motion.div>
+            </motion.div>
+
+
+            <motion.div
+              className="md:w-1/2 w-full"
+              variants={imageAnim}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.4 }}
+            >
+              <div className="w-full h-52 sm:h-60 min-h-[13rem] rounded-2xl overflow-hidden">
+
+                <img
+                  src="/projects/lazza.png"
                   alt="E-commerce Project"
                   className="w-full h-full object-cover"
                 />
