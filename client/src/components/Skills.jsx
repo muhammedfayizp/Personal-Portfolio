@@ -12,6 +12,7 @@ import {
   SiTailwindcss,
   SiWebrtc,
   SiSocketdotio,
+  SiNextdotjs,
 } from "react-icons/si"
 
 
@@ -20,6 +21,7 @@ const skills = [
   { name: "TypeScript", icon: SiTypescript, color: "hover:bg-blue-500/20 hover:text-blue-400" },
   { name: "React", icon: SiReact, color: "hover:bg-cyan-400/20 hover:text-cyan-400" },
   { name: "Redux", icon: SiRedux, color: "hover:bg-purple-500/20 hover:text-purple-400" },
+  { name: "Next.js", icon: SiNextdotjs, color: "hover:bg-gray-300/20 hover:text-white" },
   { name: "Tailwind CSS", icon: SiTailwindcss, color: "hover:bg-sky-400/20 hover:text-sky-400" },
   { name: "Node.js", icon: SiNodedotjs, color: "hover:bg-green-500/20 hover:text-green-400" },
   { name: "Express.js", icon: SiExpress, color: "hover:bg-gray-400/20 hover:text-gray-300" },
