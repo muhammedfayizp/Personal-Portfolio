@@ -95,7 +95,7 @@ const Projects = () => {
                 variants={item}
                 className="text-white/70 mt-3 text-sm leading-relaxed"
               >
-                [In Progress] Virtual co-working platform that helps remote workers stay productive through focused collaboration and real-time communication with colleagues.
+                <strong className="text-white">[In Progress]</strong> Virtual co-working platform that helps remote workers stay productive through focused collaboration and real-time communication with colleagues.
               </motion.p>
 
               <motion.div variants={item} className="flex flex-wrap gap-2 mt-4">
@@ -169,8 +169,7 @@ const Projects = () => {
                 variants={item}
                 className="text-white/70 mt-3 text-sm leading-relaxed"
               >
-                Full-stack MERN e-commerce application with admin dashboard,
-                authentication, product management and payments.
+                A scalable e-commerce solution built with the MERN stack that allows users to explore and purchase products while providing administrators with tools to manage inventory, users, and orders efficiently.
               </motion.p>
 
               <motion.div variants={item} className="flex flex-wrap gap-2 mt-4">
@@ -211,7 +210,7 @@ const Projects = () => {
 
         {/* PROJECT 3 */}
 
-        {/* <ScrollStackItem
+        <ScrollStackItem
           itemClassName="
             bg-gradient-to-br from-[#0A0F0C] via-[#0E1512] to-[#020202]
             border border-teal-400/20
@@ -230,21 +229,21 @@ const Projects = () => {
               viewport={{ once: false, amount: 0.4 }}
             >
               <motion.h3 variants={item} className="text-2xl font-semibold">
-                E-commerce Platform
               </motion.h3>
 
               <motion.p
                 variants={item}
                 className="text-white/70 mt-3 text-sm leading-relaxed"
               >
-                Full-stack MERN e-commerce application with admin dashboard,
-                authentication, product management and payments.
+                <strong className="text-white">[In Progress]</strong> An interactive learning resource organizer that helps students and developers manage tutorials, documentation,
+                and notes through category filtering, tagging, and a clean dark/light themed UI.
               </motion.p>
 
               <motion.div variants={item} className="flex flex-wrap gap-2 mt-4">
+              <span className="px-3 py-1 text-xs rounded-full bg-white/20">Next.js</span>
                 <span className="px-3 py-1 text-xs rounded-full bg-white/20">React</span>
-                <span className="px-3 py-1 text-xs rounded-full bg-white/20">Node</span>
-                <span className="px-3 py-1 text-xs rounded-full bg-white/20">MongoDB</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-white/20">JavaScript</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-white/20">Tailwind CSS</span>
               </motion.div>
 
               <motion.div variants={item} className="flex gap-4 mt-6">
@@ -268,32 +267,25 @@ const Projects = () => {
               <div className="w-full h-52 sm:h-60 min-h-[13rem] rounded-2xl overflow-hidden">
 
                 <img
-                  src=""
+                  src="/projects/newPro.png"
                   alt="E-commerce Project"
                   className="w-full h-full object-cover"
                 />
               </div>
             </motion.div>
           </div>
-        </ScrollStackItem> */}
+        </ScrollStackItem>
 
         {/*4 section */}
 
         <ScrollStackItem
-          // itemClassName="
-          //   bg-gradient-to-br from-[#0B1220] via-[#0F1B2D] to-[#020617]
-          //   border border-emerald-400/20
-          //   backdrop-blur-xl
-          //   shadow-[0_30px_40px_-25px_rgba(45,212,191,0.25)]
-          //   text-white
-          // "
           itemClassName="
-            bg-gradient-to-br from-[#0A0F0C] via-[#0E1512] to-[#020202]
-            border border-teal-400/20
-            backdrop-blur-xl
-            shadow-[0_30px_40px_-25px_rgba(45,212,191,0.25)]
-            text-white
-          "
+          bg-gradient-to-br from-[#0B1220] via-[#0F1B2D] to-[#020617]
+          border border-emerald-400/20
+          backdrop-blur-xl
+          shadow-[0_30px_40px_-25px_rgba(45,212,191,0.25)]
+          text-white
+        "
         >
           <div className="flex flex-col md:flex-row gap-8 items-center">
             {/* Content */}
