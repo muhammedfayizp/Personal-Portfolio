@@ -32,6 +32,14 @@ body {
 }
 
 
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  scrollbar-width: none;
+}
+
+
 
 @media (max-width: 768px) {
   .vertical-timeline-element-content {
