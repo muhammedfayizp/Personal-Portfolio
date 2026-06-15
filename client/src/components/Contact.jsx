@@ -55,7 +55,7 @@ const Contact = () => {
 
   const validate = () => {
     const newErrors = {}
-  
+
     /* ---------- Email ---------- */
     if (!email.trim()) {
       newErrors.email = "Email is required"
@@ -64,7 +64,7 @@ const Contact = () => {
     } else if (email.toLowerCase() === "fayizp6235@gmail.com") {
       newErrors.email = "Please enter your own email address"
     }
-  
+
     /* ---------- Subject ---------- */
     if (!subject.trim()) {
       newErrors.subject = "Subject is required"
@@ -75,7 +75,7 @@ const Contact = () => {
     } else if (!hasLetter(subject)) {
       newErrors.subject = "Subject must contain letters"
     }
-  
+
     /* ---------- Message ---------- */
     if (!message.trim()) {
       newErrors.message = "Message cannot be empty"
@@ -88,11 +88,11 @@ const Contact = () => {
     } else if (!hasLetter(message)) {
       newErrors.message = "Message must contain letters"
     }
-  
+
     setErrors(newErrors)
     return Object.keys(newErrors).length === 0
   }
-  
+
 
 
   const handleSubmit = (e) => {
@@ -112,7 +112,7 @@ const Contact = () => {
       )
       .then(() => {
         alert("Message sent successfully!")
-        resetForm() 
+        resetForm()
       })
       .catch(() => {
         alert("Failed to send message")
@@ -127,7 +127,7 @@ const Contact = () => {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        viewport={{ once: true , amount: 0.5 }}
+        viewport={{ once: true, amount: 0.5 }}
         className="relative text-4xl sm:text-5xl font-serif mb-16"
       >
         <span className="relative z-10 px-4 rounded-lg bg-[#020c05]">

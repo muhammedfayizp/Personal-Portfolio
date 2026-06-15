@@ -83,6 +83,78 @@ const Projects = () => {
       <ScrollStack initial={false} >
         {/* PROJECT 1 */}
 
+        {/* <ScrollStackItem
+          itemClassName="
+            bg-gradient-to-br from-[#0A0F0C] via-[#0E1512] to-[#020202]
+            border border-teal-400/20
+            backdrop-blur-xl
+            shadow-[0_30px_40px_-25px_rgba(45,212,191,0.25)]
+            text-white
+          "
+        >
+
+          <div className="flex flex-col md:flex-row gap-1 items-center">
+            <motion.div
+              className="md:w-1/2"
+              variants={container}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.4 }}
+            >
+              <motion.h3 variants={item} className="text-2xl font-semibold">
+                Worqzone
+              </motion.h3>
+
+              <motion.p
+                variants={item}
+                className="text-white/70 mt-3 text-sm leading-relaxed"
+              >
+                <strong className="text-white">[In Progress]</strong> Virtual co-working platform that helps remote workers stay productive through focused collaboration and real-time communication with colleagues.
+              </motion.p>
+
+              <motion.div variants={item} className="flex flex-wrap gap-2 mt-4">
+                <span className="px-3 py-1 text-xs rounded-full bg-white/20">React</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-white/20">Tailwind CSS</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-white/20">Node.js</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-white/20">Typescript</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-white/20">MongoDB</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-white/20">Webrtc</span>
+                <span className="px-3 py-1 text-xs rounded-full bg-white/20">Socket.IO</span>
+              </motion.div>
+
+              <motion.div variants={item} className="flex gap-4 mt-6">
+                <a className="px-4 py-2 text-sm rounded-full bg-white text-black font-medium">
+                  Live Demo
+                </a>
+                <a className="px-4 py-2 text-sm rounded-full border border-white/30"
+                  href="https://github.com/muhammedfayizp/worqzone"
+                >
+                  GitHub
+                </a>
+              </motion.div>
+            </motion.div>
+
+            <motion.div
+              className="md:w-1/2 w-full"
+              variants={imageAnim}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.4 }}
+            >
+              <div className="w-full aspect-[22/11] rounded-2xl overflow-hidden bg-white/5">
+                <img
+                  src="/projects/secondProject.png"
+                  alt="Worqzone Project"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </motion.div>
+
+
+          </div>
+        </ScrollStackItem> */}
+
+
         <ScrollStackItem
           itemClassName="
             bg-gradient-to-br from-[#0A0F0C] via-[#0E1512] to-[#020202]
@@ -137,18 +209,66 @@ const Projects = () => {
 
             {/* Image */}
             <motion.div
-              className="md:w-1/2 w-full"
+              className="md:w-1/2 w-full relative group"
               variants={imageAnim}
               initial="hidden"
               whileInView="show"
               viewport={{ once: false, amount: 0.4 }}
             >
-              <div className="w-full aspect-[22/11] rounded-2xl overflow-hidden bg-white/5">
-                <img
-                  src="/projects/secondProject.png"
-                  alt="Worqzone Project"
-                  className="w-full h-full object-cover"
-                />
+              {/* Gradient Fade Left */}
+              <div className="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-black/40 to-transparent z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition" />
+
+              {/* Gradient Fade Right */}
+              <div className="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-black/40 to-transparent z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition" />
+
+              {/* Left Button */}
+              <button
+                onClick={() => scroll("left")}
+                className="absolute left-3 top-1/2 -translate-y-1/2 z-20 
+        bg-white/80 backdrop-blur-md p-2 rounded-full shadow-lg 
+        opacity-0 group-hover:opacity-100 transition hover:scale-110"
+              >
+                <ChevronLeft size={22} />
+              </button>
+
+              {/* Right Button */}
+              <button
+                onClick={() => scroll("right")}
+                className="absolute right-3 top-1/2 -translate-y-1/2 z-20 
+        bg-white/80 backdrop-blur-md p-2 rounded-full shadow-lg 
+        opacity-0 group-hover:opacity-100 transition hover:scale-110"
+              >
+                <ChevronRight size={22} />
+              </button>
+
+              {/* Scroll Container */}
+              <div
+                ref={scrollRef}
+                className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide"
+              >
+                {[
+                  "/projects/SP 2.1.png",
+                  "/projects/SP 2.2.png",
+                  "/projects/SP 2.3.png",
+                  "/projects/SP 2.4.png",
+                  "/projects/SP 2.5.png",
+                  "/projects/SP 2.6.png",
+                  "/projects/SP 2.7.png",
+                  "/projects/SP 2.8.png",
+                ].map((img, i) => (
+                  <div
+                    key={i}
+                    className="min-w-full sm:min-w-[90%] md:min-w-full
+      aspect-[22/11] rounded-2xl overflow-hidden shadow-lg"
+                  >
+                    <img
+                      src={img}
+                      alt={`Project Screenshot ${i + 1}`}
+                      className="w-full h-full object-cover
+        hover:scale-105 transition duration-500"
+                    />
+                  </div>
+                ))}
               </div>
             </motion.div>
 
