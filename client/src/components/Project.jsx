@@ -52,12 +52,26 @@ const fadeUp = {
 
 const Projects = () => {
 
-  const scrollRef = useRef(null);
+  // const scrollRef = useRef(null);
 
-  const scroll = (direction) => {
-    if (scrollRef.current) {
-      const scrollAmount = scrollRef.current.offsetWidth;
-      scrollRef.current.scrollBy({
+  // const scroll = (direction) => {
+  //   if (scrollRef.current) {
+  //     const scrollAmount = scrollRef.current.offsetWidth;
+  //     scrollRef.current.scrollBy({
+  //       left: direction === "left" ? -scrollAmount : scrollAmount,
+  //       behavior: "smooth",
+  //     });
+  //   }
+  // };
+
+  const worqzoneRef = useRef(null);
+  const chatAppRef = useRef(null);
+
+  const scroll = (ref, direction) => {
+    if (ref.current) {
+      const scrollAmount = ref.current.offsetWidth;
+
+      ref.current.scrollBy({
         left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth",
       });
@@ -209,70 +223,70 @@ const Projects = () => {
 
             {/* Image */}
             <motion.div
-  className="w-full md:w-1/2 relative group"
-  variants={imageAnim}
-  initial="hidden"
-  whileInView="show"
-  viewport={{ once: false, amount: 0.4 }}
->
-  {/* Left Fade */}
-  <div className="absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-black/40 to-transparent z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition" />
+              className="w-full md:w-1/2 relative group"
+              variants={imageAnim}
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: false, amount: 0.4 }}
+            >
+              {/* Left Fade */}
+              <div className="absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-black/40 to-transparent z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition" />
 
-  {/* Right Fade */}
-  <div className="absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-black/40 to-transparent z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition" />
+              {/* Right Fade */}
+              <div className="absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-black/40 to-transparent z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition" />
 
-  {/* Left Button */}
-  <button
-    onClick={() => scroll("left")}
-    className="absolute left-2 md:left-3 top-1/2 -translate-y-1/2 z-20
+              {/* Left Button */}
+              <button
+                onClick={() => scroll(worqzoneRef, "left")}
+                className="absolute left-2 md:left-3 top-1/2 -translate-y-1/2 z-20
     bg-white/80 backdrop-blur-md p-2 md:p-3 rounded-full shadow-lg
     opacity-100 md:opacity-0 md:group-hover:opacity-100
     transition hover:scale-110"
-  >
-    <ChevronLeft size={20} />
-  </button>
+              >
+                <ChevronLeft size={20} />
+              </button>
 
-  {/* Right Button */}
-  <button
-    onClick={() => scroll("right")}
-    className="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 z-20
+              {/* Right Button */}
+              <button
+                onClick={() => scroll(worqzoneRef, "right")}
+                className="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 z-20
     bg-white/80 backdrop-blur-md p-2 md:p-3 rounded-full shadow-lg
     opacity-100 md:opacity-0 md:group-hover:opacity-100
     transition hover:scale-110"
-  >
-    <ChevronRight size={20} />
-  </button>
+              >
+                <ChevronRight size={20} />
+              </button>
 
-  {/* Carousel */}
-  <div
-    ref={scrollRef}
-    className="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
-  >
-    {[
-      "/projects/SP 2.1.png",
-      "/projects/SP 2.2.png",
-      "/projects/SP 2.3.png",
-      "/projects/SP 2.4.png",
-      "/projects/SP 2.5.png",
-      "/projects/SP 2.6.png",
-      "/projects/SP 2.7.png",
-      "/projects/SP 2.8.png",
-    ].map((img, i) => (
-      <div
-        key={i}
-        className="flex-shrink-0 w-full snap-center"
-      >
-        <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
-          <img
-            src={img}
-            alt={`Project Screenshot ${i + 1}`}
-            className="w-full h-full object-contain bg-black/5 hover:scale-105 transition duration-500"
-          />
-        </div>
-      </div>
-    ))}
-  </div>
-</motion.div>
+              {/* Carousel */}
+              <div
+                ref={worqzoneRef}
+                className="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
+              >
+                {[
+                  "/projects/SP 2.1.png",
+                  "/projects/SP 2.2.png",
+                  "/projects/SP 2.3.png",
+                  "/projects/SP 2.4.png",
+                  "/projects/SP 2.5.png",
+                  "/projects/SP 2.6.png",
+                  "/projects/SP 2.7.png",
+                  "/projects/SP 2.8.png",
+                ].map((img, i) => (
+                  <div
+                    key={i}
+                    className="flex-shrink-0 w-full snap-center"
+                  >
+                    <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
+                      <img
+                        src={img}
+                        alt={`Project Screenshot ${i + 1}`}
+                        className="w-full h-full object-contain bg-black/5 hover:scale-105 transition duration-500"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
 
 
           </div>
@@ -374,7 +388,7 @@ const Projects = () => {
 
               {/* Left Button */}
               <button
-                onClick={() => scroll("left")}
+                onClick={() => scroll(chatAppRef, "left")}
                 className="absolute left-3 top-1/2 -translate-y-1/2 z-20 
         bg-white/80 backdrop-blur-md p-2 rounded-full shadow-lg 
         opacity-0 group-hover:opacity-100 transition hover:scale-110"
@@ -384,7 +398,7 @@ const Projects = () => {
 
               {/* Right Button */}
               <button
-                onClick={() => scroll("right")}
+                onClick={() => scroll(chatAppRef, "right")}
                 className="absolute right-3 top-1/2 -translate-y-1/2 z-20 
         bg-white/80 backdrop-blur-md p-2 rounded-full shadow-lg 
         opacity-0 group-hover:opacity-100 transition hover:scale-110"
@@ -394,7 +408,7 @@ const Projects = () => {
 
               {/* Scroll Container */}
               <div
-                ref={scrollRef}
+                ref={chatAppRef}
                 className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide"
               >
                 {["/projects/ChatApp1.png", "/projects/ChatApp2.png"].map(
