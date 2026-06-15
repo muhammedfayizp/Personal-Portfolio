@@ -209,68 +209,70 @@ const Projects = () => {
 
             {/* Image */}
             <motion.div
-              className="md:w-1/2 w-full relative group"
-              variants={imageAnim}
-              initial="hidden"
-              whileInView="show"
-              viewport={{ once: false, amount: 0.4 }}
-            >
-              {/* Gradient Fade Left */}
-              <div className="absolute left-0 top-0 h-full w-12 bg-gradient-to-r from-black/40 to-transparent z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition" />
+  className="w-full md:w-1/2 relative group"
+  variants={imageAnim}
+  initial="hidden"
+  whileInView="show"
+  viewport={{ once: false, amount: 0.4 }}
+>
+  {/* Left Fade */}
+  <div className="absolute left-0 top-0 h-full w-10 bg-gradient-to-r from-black/40 to-transparent z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition" />
 
-              {/* Gradient Fade Right */}
-              <div className="absolute right-0 top-0 h-full w-12 bg-gradient-to-l from-black/40 to-transparent z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition" />
+  {/* Right Fade */}
+  <div className="absolute right-0 top-0 h-full w-10 bg-gradient-to-l from-black/40 to-transparent z-10 pointer-events-none opacity-0 group-hover:opacity-100 transition" />
 
-              {/* Left Button */}
-              <button
-                onClick={() => scroll("left")}
-                className="absolute left-3 top-1/2 -translate-y-1/2 z-20 
-        bg-white/80 backdrop-blur-md p-2 rounded-full shadow-lg 
-        opacity-0 group-hover:opacity-100 transition hover:scale-110"
-              >
-                <ChevronLeft size={22} />
-              </button>
+  {/* Left Button */}
+  <button
+    onClick={() => scroll("left")}
+    className="absolute left-2 md:left-3 top-1/2 -translate-y-1/2 z-20
+    bg-white/80 backdrop-blur-md p-2 md:p-3 rounded-full shadow-lg
+    opacity-100 md:opacity-0 md:group-hover:opacity-100
+    transition hover:scale-110"
+  >
+    <ChevronLeft size={20} />
+  </button>
 
-              {/* Right Button */}
-              <button
-                onClick={() => scroll("right")}
-                className="absolute right-3 top-1/2 -translate-y-1/2 z-20 
-        bg-white/80 backdrop-blur-md p-2 rounded-full shadow-lg 
-        opacity-0 group-hover:opacity-100 transition hover:scale-110"
-              >
-                <ChevronRight size={22} />
-              </button>
+  {/* Right Button */}
+  <button
+    onClick={() => scroll("right")}
+    className="absolute right-2 md:right-3 top-1/2 -translate-y-1/2 z-20
+    bg-white/80 backdrop-blur-md p-2 md:p-3 rounded-full shadow-lg
+    opacity-100 md:opacity-0 md:group-hover:opacity-100
+    transition hover:scale-110"
+  >
+    <ChevronRight size={20} />
+  </button>
 
-              {/* Scroll Container */}
-              <div
-                ref={scrollRef}
-                className="flex gap-4 overflow-x-auto scroll-smooth scrollbar-hide"
-              >
-                {[
-                  "/projects/SP 2.1.png",
-                  "/projects/SP 2.2.png",
-                  "/projects/SP 2.3.png",
-                  "/projects/SP 2.4.png",
-                  "/projects/SP 2.5.png",
-                  "/projects/SP 2.6.png",
-                  "/projects/SP 2.7.png",
-                  "/projects/SP 2.8.png",
-                ].map((img, i) => (
-                  <div
-                    key={i}
-                    className="min-w-full sm:min-w-[90%] md:min-w-full
-      aspect-[22/11] rounded-2xl overflow-hidden shadow-lg"
-                  >
-                    <img
-                      src={img}
-                      alt={`Project Screenshot ${i + 1}`}
-                      className="w-full h-full object-cover
-        hover:scale-105 transition duration-500"
-                    />
-                  </div>
-                ))}
-              </div>
-            </motion.div>
+  {/* Carousel */}
+  <div
+    ref={scrollRef}
+    className="flex gap-4 overflow-x-auto scroll-smooth snap-x snap-mandatory scrollbar-hide"
+  >
+    {[
+      "/projects/SP 2.1.png",
+      "/projects/SP 2.2.png",
+      "/projects/SP 2.3.png",
+      "/projects/SP 2.4.png",
+      "/projects/SP 2.5.png",
+      "/projects/SP 2.6.png",
+      "/projects/SP 2.7.png",
+      "/projects/SP 2.8.png",
+    ].map((img, i) => (
+      <div
+        key={i}
+        className="flex-shrink-0 w-full snap-center"
+      >
+        <div className="aspect-video rounded-2xl overflow-hidden shadow-lg">
+          <img
+            src={img}
+            alt={`Project Screenshot ${i + 1}`}
+            className="w-full h-full object-contain bg-black/5 hover:scale-105 transition duration-500"
+          />
+        </div>
+      </div>
+    ))}
+  </div>
+</motion.div>
 
 
           </div>
